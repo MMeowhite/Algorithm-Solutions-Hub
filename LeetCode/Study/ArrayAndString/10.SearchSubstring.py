@@ -10,7 +10,7 @@ class Solution:
         
         n, m = len(haystack), len(needle)
         if m > n:
-            return -1;
+            return -1
 
         for i in range(n - m + 1):
             if haystack[i:i+m] == needle:
