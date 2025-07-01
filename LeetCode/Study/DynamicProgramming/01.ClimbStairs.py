@@ -13,3 +13,27 @@ class Solution:
             a, b = b, a + b
 
         return b
+
+def test():
+    sol = Solution()
+
+    test_cases = [
+        (1, 1),
+        (2, 2),
+        (3, 3),
+        (4, 5),
+        (5, 8),
+        (10, 89),
+        (0, 0),     # 边界情况，可选处理
+        (20, 10946),
+    ]
+
+    for i, (n, expected) in enumerate(test_cases):
+        result = sol.climbStairs(n)
+        print(f"Test case {i+1}: n = {n}")
+        print(f"Expected: {expected}, Got: {result}")
+        print("Pass ✅" if result == expected else "Fail ❌")
+        print("-" * 40)
+
+if __name__ == "__main__":
+    test()
